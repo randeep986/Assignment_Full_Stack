@@ -1,11 +1,10 @@
+const mongoose = require("mongoose");
 
-const mongoose =require("mongoose")
-
-const DB= "mongodb+srv://randeep986:randeep@cluster0.ywilz3b.mongodb.net/Authusers?retryWrites=true&w=majority"
+const DB = process.env.DATABASE
 
 mongoose.connect(DB,{
-    useUnifiedTopology:true,
-    useNewUrlParser:true
+    useUnifiedTopology: true,
+    useNewUrlParser: true
 }).then(()=> console.log("DataBase Connected")).catch((errr)=>{
     console.log(errr);
 })
