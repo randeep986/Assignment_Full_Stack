@@ -6,4 +6,6 @@ const DB= "mongodb+srv://randeep986:randeep@cluster0.ywilz3b.mongodb.net/Authuse
 mongoose.connect(DB,{
     useUnifiedTopology:true,
     useNewUrlParser:true
+}).then(()=> console.log("DataBase Connected")).catch((errr)=>{
+    console.log(errr);
 })
